@@ -193,4 +193,4 @@ python train_v3.py
 ```
 
 ## Contact 
-Xingang Peng (xingang.peng@gmail.com)
+
