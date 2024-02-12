@@ -77,7 +77,13 @@ CUDA_VISIBLE_DEVICES=0 taskset -c 2 bash batch_sample.sh  3 2 0
 
 The three parameters of `batch_sample.py` represent the number of workers, the index of current worker and the start index of the datapoint in the test set, respectively.
 
-generated mols visualization
+Generated mols visualization,
+
+|                  example 1                   |                   example 2                   |                   example 3                   |                  example 4                   |
+|:--------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|
+| ![image](./static/figs4git/100mol4pock1.png) | ![image](./static/figs4git/110mol4pock1.png)  | ![image](./static/figs4git/115mol4pock1.png)  | ![image](./static/figs4git/116mol4pock1.png) |
+|          example 5                           |                   example 6                   |                   example 7                   |                  example 8                   |
+| ![image](./static/figs4git/95mol4pock1.png)  | ![image](./static/figs4git/94mol4pock1.png)   |  ![image](./static/figs4git/90mol4pock1.png)  | ![image](./static/figs4git/88mol4pock1.png)  |
 
 ## 2. Off-target Effect Pre-experiment
 
@@ -96,7 +102,6 @@ python off_target_demo.py
 After calculating all the vina scores in `./evaluation/vina_scores.csv`, the format of calculated
 data is alike as follows in this file.
 
-
 | exp_id | sdf_id | pdb_id |            exp_dir            |            ligand             |           receptor            |  original pair  |  Best affinity  |         RMSD         |  data_i  |  pock_id  |
 |:------:|:------:|:------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|:---------------:|:---------------:|:--------------------:|:--------:|:---------:|
 |   0    | 0      | 0      | sample_0_2023_11_20__09_32_23 |   BSD_ASPTE_1_130_0/xxx.sdf   |   BSD_ASPTE_1_130_0/xxx.pdb   |        1        |      -3.2       |  13.291612914122291  |    0     |     0     |
@@ -111,14 +116,13 @@ data is alike as follows in this file.
 |   0    | 0      | 9      | sample_0_2023_11_20__09_32_23 |  IPMK_HUMAN_49_416_0/xxx.sdf  |  IPMK_HUMAN_49_416_0/xxx.pdb  |        0        |      -2.5       |  82.66019252936337   |    0     |     9     |
 |   0    | 1      | 0      | sample_0_2023_11_20__09_32_23 |   BSD_ASPTE_1_130_0/xxx.sdf   |   BSD_ASPTE_1_130_0/xxx.pdb   |        1        |      -2.9       |  3.8684796924690397  |    1     |     0     |
 
-
 Further analyzing is from the statistics of this file.
 
 2.2. Further Analyzing
 
 ...command
 
-effect figures.
+effect figures. (waiting FW)
 
 ## 4. Evaluating Chemical Performance of MolPred-AOE
 
@@ -130,6 +134,8 @@ python evaluate_chem
 ```
 
 By this command, the metrics are calculated. 
+
+(Waiting for res.)
 
 ## 5. Target-to-Sidelobe Ratio Calculation (waiting copy and finished)
 
@@ -153,7 +159,23 @@ result table or figures
 
 ## 6. Target-Pocket Molecule Generation
 
-opptional
+To generate ligands for designated pocket, you need to provide the `PDB` structure file of the protein, the `center coordinate` of the pocket bounding box.
+
+Example:
+
+```bash
+python sample_for_pdb.py \
+      --pdb_path ./data/crossdocked_pocket10/GLMU_STRPN_2_459_0/4aaw_A_rec_4ac3_r83_lig_tt_min_0_pocket10.pdb
+      --center " 44.618943,37.61729,83.75427318"
+```
+
+Examples of generated molecules are as below. 
+
+|                   example 1                   |                   example 2                   |                   example 3                   |                   example 4                   |
+|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
+| ![image](./static/figs4git/92mol4pock9.png)   | ![image](./static/figs4git/93mol4pock9.png)   |  ![image](./static/figs4git/94mol4pock9.png)  | ![image](./static/figs4git/100mol4pock9.png)  |
+|                   example 5                   |                   example 6                   |                   example 7                   |                   example 8                   |
+| ![image](./static/figs4git/101mol4pock9.png)  | ![image](./static/figs4git/102mol4pock9.png)  | ![image](./static/figs4git/103mol4pock9.png)  | ![image](./static/figs4git/104mol4pock9.png)  |
 
 
 ## 7. Training
@@ -165,44 +187,9 @@ python train_v3.py
 ```
 
 
-Datasets
-
-Please refer to [`README.md`](./data/README.md) in the `data` folder.
-
-## Sampling
-
-### Sampling for pockets in the testset
-
-
-### Sampling for PDB pockets 
-To generate ligands for your own pocket, you need to provide the `PDB` structure file of the protein, the center coordinate of the pocket bounding box, and optionally the side length of the bounding box (default: 23Å).
-
-Example:
-
-```bash
-python sample_for_pdb.py \
-      --pdb_path ./example/4yhj.pdb
-      --center " 32.0,28.0,36.0"
-```
-
-<img src="./assets/bounding_box.png" alt="bounding box" width="70%" />
-
-
-## Training
-
-```
-python train.py --config ./configs/train.yml --logdir ./logs
-```
-For training, we recommend to install [`apex` ](https://github.com/NVIDIA/apex) for lower gpu memory usage. If  so, change the value of `train/use_apex` in the `configs/train.yml` file.
-
 ## Citation
 ```
-@inproceedings{peng2022pocket2mol,
-  title={Pocket2Mol: Efficient Molecular Sampling Based on 3D Protein Pockets},
-  author={Xingang Peng and Shitong Luo and Jiaqi Guan and Qi Xie and Jian Peng and Jianzhu Ma},
-  booktitle={International Conference on Machine Learning},
-  year={2022}
-}
+
 ```
 
 ## Contact 
