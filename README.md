@@ -96,7 +96,7 @@ python off_target_demo.py
 After calculating all the vina scores in `./evaluation/vina_scores.csv`, the format of calculated
 data is alike as follows in this file.
 
-```bash
+
 | exp_id | sdf_id | pdb_id |            exp_dir            |            ligand             |           receptor            |  original pair  |  Best affinity  |         RMSD         |  data_i  |  pock_id  |
 |:------:|:------:|:------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|:---------------:|:---------------:|:--------------------:|:--------:|:---------:|
 |   0    | 0      | 0      | sample_0_2023_11_20__09_32_23 |   BSD_ASPTE_1_130_0/xxx.sdf   |   BSD_ASPTE_1_130_0/xxx.pdb   |        1        |      -3.2       |  13.291612914122291  |    0     |     0     |
@@ -110,7 +110,7 @@ data is alike as follows in this file.
 |   0    | 0      | 8      | sample_0_2023_11_20__09_32_23 |  CCPR_YEAST_69_361_0/xxx.sdf  |  CCPR_YEAST_69_361_0/xxx.pdb  |        0        |      -3.0       |  118.56201263074658  |    0     |     8     |
 |   0    | 0      | 9      | sample_0_2023_11_20__09_32_23 |  IPMK_HUMAN_49_416_0/xxx.sdf  |  IPMK_HUMAN_49_416_0/xxx.pdb  |        0        |      -2.5       |  82.66019252936337   |    0     |     9     |
 |   0    | 1      | 0      | sample_0_2023_11_20__09_32_23 |   BSD_ASPTE_1_130_0/xxx.sdf   |   BSD_ASPTE_1_130_0/xxx.pdb   |        1        |      -2.9       |  3.8684796924690397  |    1     |     0     |
-```
+
 
 Further analyzing is from the statistics of this file.
 
