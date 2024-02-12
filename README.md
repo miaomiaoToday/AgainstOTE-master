@@ -165,8 +165,8 @@ Example:
 
 ```bash
 python sample_for_pdb.py \
-      --pdb_path ./data/crossdocked_pocket10/GLMU_STRPN_2_459_0/4aaw_A_rec_4ac3_r83_lig_tt_min_0_pocket10.pdb
-      --center " 44.618943,37.61729,83.75427318"
+      --pdb_path ./data/crossdocked_pocket10/CCPR_YEAST_69_361_0/1a2g_A_rec_4jmv_1ly_lig_tt_min_0_pocket10.pdb
+      --center " -23.3338,25.1579,-2.0340"
 ```
 
 Examples of generated molecules are as below. 
@@ -193,4 +193,4 @@ python train_v3.py
 ```
 
 ## Contact 
-
+Xingang Peng (xingang.peng@gmail.com)
