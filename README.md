@@ -1,6 +1,6 @@
-# MolPred-AOE: 3D 
+# AgainstOTE: a 3D molecular generation model against off-target effects
 
-MolPred-AOE uses xxx & xxx to improve efficiency and molecule quality of [Pocket2Mol](https://arxiv.org/abs/2205.07249).
+
 
 <img src="./assets/model.jpg" alt="model"  width="70%"/>
 
