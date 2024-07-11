@@ -148,7 +148,7 @@ For evaluating the chemical performance of 'qed', 'sa', 'lipinski' and 'logp',
 
 ```bash
 cd /evaluation
-python evaluate_chem
+python evaluate_chem.py
 ```
 
 By this command, the metrics are calculated. 
@@ -167,7 +167,7 @@ For evaluating the attributes like 'hba', 'hbd', 'mw' and 'tpsa',
 
 ```bash
 cd /evaluation
-python evaluate_MW
+python evaluate_MW.py
 ```
 
 ## 6. Target Affinity, Off-Target Affinity and TSR Calculation
@@ -176,7 +176,7 @@ To calculate the Target and Off-target Affinity
 
 ```bash
 cd /off_target_demo
-python off_target_demo_v2
+python off_target_demo_v2.py
 ```
 
 This process generates the file whose format is alike as in the `.csv` file.
@@ -185,7 +185,7 @@ To calculate TSR (Target-to-Sidelobe Ratio), the calculation is based on the res
 
 ```bash
 cd /off_target_demo
-python Data_analysis_eval_TSR
+python Data_analysis_eval_TSR.py
 ```
 
 The results in this part is listed as
