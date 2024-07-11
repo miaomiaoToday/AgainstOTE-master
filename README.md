@@ -170,23 +170,25 @@ cd /evaluation
 python evaluate_MW
 ```
 
-## 6. Target-to-Sidelobe Ratio Calculation (waiting copy and finished)
+## 6. Target Affinity, Off-Target Affinity and TSR Calculation
 
-To calculate TSR (Target-to-Sidelobe Ratio), the docking scores are calculated as first,
-
-```bash
-cd /evaluation
-python evaluate_chem
-```
-
-This process generates the file whose format is alike as in the `.csv` file in 3.1.
-
-For calculating TSR, please continue to 
+To calculate the Target and Off-target Affinity
 
 ```bash
-cd /evaluation
-python data_ana...TSR.py
+cd /off_target_demo
+python off_target_demo_v2
 ```
+
+This process generates the file whose format is alike as in the `.csv` file.
+
+To calculate TSR (Target-to-Sidelobe Ratio), the calculation is based on the results of affinity,
+
+```bash
+cd /off_target_demo
+python Data_analysis_eval_TSR
+```
+
+The results in this part is listed as
 
 | Methods |	Affinity-Target ↓	| Affinity-OffTarget ↑	| TSR ↑ |
 |:----------:|:-------:|:--------:|:--------:|
