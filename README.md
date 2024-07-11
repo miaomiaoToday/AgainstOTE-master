@@ -158,6 +158,13 @@ By this command, the metrics are calculated.
 |FLAG |	0.495±0.17 |	0.745±0.16 |	0.630±2.38 |	4.943±0.14 |
 |AgainstOTE |	0.556±0.14 |	0.664±0.15 |	1.856±1.74 |	4.985±0.12 |
 
+For evaluating the attributes like 'hba', 'hbd', 'mw' and 'tpsa', 
+
+```bash
+cd /evaluation
+python evaluate_MW
+```
+
 ## 6. Target-to-Sidelobe Ratio Calculation (waiting copy and finished)
 
 To calculate TSR (Target-to-Sidelobe Ratio), the docking scores are calculated as first,
