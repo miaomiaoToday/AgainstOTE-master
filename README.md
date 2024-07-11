@@ -10,6 +10,16 @@ This model takes the pocket as input, produces multiple plausible molecules high
 
 <img src="./figs/MolCases.png" alt="model"  width="100%"/>
 
+**🍇 Updates**
+- **`2024/07/xx`** Guidelines for reproducing pre-experiments and formal experiments.
+- **`2024/07/11`** Release code, pretrained weights and data. Basic deployment for future support.
+
+## Installation
+Clone the repository locally:
+```bash
+git clone https://github.com/CASIA-IVA-Lab/FastSAM.git
+```
+
 
 
 ### Install via conda yaml file (cuda 11.3)
