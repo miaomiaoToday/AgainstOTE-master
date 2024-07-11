@@ -4,7 +4,7 @@ The preview of the model architecture can be viewed as below. For exploring the 
 
 <img src="./figs/ModelStructure.png" alt="model"  width="100%"/>
 
-
+<img src="./figs/BasicComparison.jpg" alt="model"  width="100%"/>
 
 ### Install via conda yaml file (cuda 11.3)
 ```bash
