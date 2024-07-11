@@ -1,8 +1,9 @@
 # AgainstOTE: a 3D molecular generation model against off-target effects
 
+The preview of the model architecture can be viewed as below. For exploring the implementation of this model, please follow the guidelines in next sections.
 
+<img src="./figs/ModelStructure.png" alt="model"  width="100%"/>
 
-<img src="./assets/model.jpg" alt="model"  width="70%"/>
 
 
 ### Install via conda yaml file (cuda 11.3)
