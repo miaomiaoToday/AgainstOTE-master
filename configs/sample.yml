@@ -1,0 +1,22 @@
+data:
+  data_name: 'test'
+  dataset:  # test dataset
+    name: pl
+    path: ./data/crossdocked_pocket10
+    split: ./data/split_by_name.pt
+
+model:
+    checkpoint: ./ckpt/pretrained-AgainstOTE.pt
+
+sample:
+  seed: 2020
+  mask_init: True
+  num_samples: 100
+  beam_size: 500
+  max_steps: 24
+  threshold:
+    focal_threshold: 0.125
+    pos_threshold: 0.0625
+    element_threshold: 0.075
+    hasatom_threshold: 0.15
+    bond_threshold: 0.1
