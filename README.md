@@ -105,7 +105,7 @@ off-target effect (i.e., the molecules for the target pocket would more likely b
 with other pockets.), we conduct the pre-experiment to check. The pre-experiment
 comprises of 2 steps.
 
-2.1. Calculating All Docking Scores between Generated Molecules and Pockets.
+4.1. Calculating All Docking Scores between Generated Molecules and Pockets.
 
 ```bash
 cd off_target_demo  
@@ -131,7 +131,7 @@ data is alike as follows in this file.
 
 Further analyzing is from the statistics of this file.
 
-2.2. Further Analyzing
+4.2. Further Analyzing
 
 ```bash
 cd off_target_demo  
