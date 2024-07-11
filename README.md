@@ -217,6 +217,10 @@ For reproducing the procedure of training, please run with
 python train_v3.py
 ```
 
+## License
+
+The model is licensed under the [Apache 2.0 license](LICENSE).
+
 
 ## Citation
 ```
