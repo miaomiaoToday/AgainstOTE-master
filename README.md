@@ -6,6 +6,12 @@ The preview of the model architecture can be viewed as below. For exploring the 
 
 <img src="./figs/BasicComparison.jpg" alt="model"  width="100%"/>
 
+This model takes the pocket as input, produces multiple plausible molecules highly likely binding to the target.
+
+<img src="./figs/MolCases.png" alt="model"  width="100%"/>
+
+
+
 ### Install via conda yaml file (cuda 11.3)
 ```bash
 conda env create -f env_cuda113.yml
