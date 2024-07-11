@@ -11,7 +11,7 @@ This model takes the pocket as input, produces multiple plausible molecules high
 <img src="./figs/MolCases.png" alt="model"  width="100%"/>
 
 **🍇 Updates**
-- **`2024/07/xx`** Guidelines for reproducing pre-experiments and formal experiments.
+- **`2024/07/12`** Release detailed code for pre-exps and off-target evaluation. Guidelines for reproducing pre-experiments and formal experiments.
 - **`2024/07/11`** Release code, pretrained weights and data. Basic deployment for future support.
 
 ## 1. Installation
